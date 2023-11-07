@@ -1,4 +1,4 @@
-describe('Form input', () => {
+describe('Form submission', () => {
   it('Adds a new todo item', () => {
     const newTodo = 'Buy pizza';
 

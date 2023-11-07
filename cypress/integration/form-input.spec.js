@@ -1,17 +1,18 @@
 describe('Form input', () => {
+
   beforeEach(() => {
-    cy.seedAndVisit([]);
-  });
+    cy.seedAndVisit()
+  })
 
   it('Focuses the input on load', () => {
-    cy.focused().should('have.class', 'new-todo');
-  });
+    cy.focused().should('have.id', 'title')
+  })
 
   it('Accepts input', () => {
-    const value = 'New todo';
+    const value = 'New ToDo'
+    cy.get('#title').type(value).should('have.value', value)
 
-    cy.get('.new-todo')
-      .type(value)
-      .should('have.value', value);
-  });
+  })
+
+
 });
